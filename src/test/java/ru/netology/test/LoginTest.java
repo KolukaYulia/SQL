@@ -18,7 +18,7 @@ public class LoginTest {
     @Test
 
     void shouldSuccessfulLogin() {
-        var loginPage = open("http://185.119.57.64:9999", LoginPage.class );
+        var loginPage = open("http://localhost:9999", LoginPage.class );
         var authInfo = DataHelper.getAuthInfoWithTestData();
         var verificationPage = loginPage.validLogin( authInfo );
         verificationPage.verifyVerificationPageVisiblity();
